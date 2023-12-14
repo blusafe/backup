@@ -3,6 +3,7 @@ baseurl: '/'
 title: "BluGuard: We safeguard your digital space, allowing you to focus on what matters most"
 url: "http://thebluguard.com"
 github_username: blusafe
+logo: "assets/logo.png"
 
 # Build settings
 markdown: kramdown
