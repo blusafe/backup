@@ -67,3 +67,4 @@ exclude:
 plugins:
   - jekyll-sitemap
   - jekyll-redirect-from
+  - jekyll-environment-variables
