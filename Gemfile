@@ -11,6 +11,8 @@ source "https://rubygems.org"
 gem "jekyll", "~> 3.7.3"
 
 
+gem 'faraday', '~> 2.7', '>= 2.7.11'
+
 gem 'faraday-retry', '~> 2.2.0' if ENV["GITHUB_ACTIONS"] != "true"
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
