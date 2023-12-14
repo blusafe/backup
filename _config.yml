@@ -1,7 +1,56 @@
 # Site settings
+baseurl: '/'
 title: "BluGuard: We safeguard your digital space, allowing you to focus on what matters most"
 url: "http://thebluguard.com"
 github_username: blusafe
 
 # Build settings
 markdown: kramdown
+
+sass:
+  style: compressed
+
+plugins:
+  - jekyll-environment-variables
+
+logo:
+  mobile: "images/logo/logo-mobile.jpg"
+  mobile_height: "32px"
+  mobile_width: "32px"
+  desktop: "images/logo/logo.jpg"
+  desktop_height: "65px"
+  desktop_width: "65px"
+
+home: 
+  limit_services: 6
+
+collections:
+  services:
+    output: true
+    sort_by: weight
+  team:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "services"
+    values:
+      layout: "service"
+  - scope:
+      path: "team"
+      type: "team"
+    values:
+      layout: "team"
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - LICENSE.md
+  - LICENSE
+  - README.md
