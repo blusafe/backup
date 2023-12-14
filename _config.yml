@@ -7,6 +7,20 @@ github_username: blusafe
 # Build settings
 markdown: kramdown
 
+kramdown:
+  syntax_highlighter_opts:
+    default_lang: xml
+
+header_pages:
+  - get_started.md
+  - url: /docs/
+    title: Documentation
+  - forums.md
+  - url: /examples/
+    title: Examples
+  - showcases.md
+  - integrations.md
+
 sass:
   style: compressed
 
@@ -21,15 +35,14 @@ logo:
   desktop_height: "65px"
   desktop_width: "65px"
 
-home: 
-  limit_services: 6
 
 collections:
-  services:
+  showcases:
     output: true
-    sort_by: weight
-  team:
+  examples:
     output: true
+    permalink: /examples/:name/index.html
+
 
 defaults:
   - scope:
@@ -44,13 +57,13 @@ defaults:
       layout: "team"
 
 exclude:
+  - .editorconfig
   - Gemfile
   - Gemfile.lock
-  - node_modules
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
-  - LICENSE.md
-  - LICENSE
+  - LICENSE.txt
   - README.md
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-redirect-from
+  - jekyll-seo-tag
